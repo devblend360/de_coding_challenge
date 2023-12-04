@@ -1,6 +1,5 @@
 import streamlit as st
 import pandas as pd
-from snowflake import connector
 from snowflake.sqlalchemy import URL
 from sqlalchemy import create_engine
 from matplotlib import pyplot as plt
