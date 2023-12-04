@@ -71,7 +71,7 @@ avg_price = filtered_df['price_in_selected_currency'].mean()
 st.sidebar.metric(f"Average Price ({selected_currency})", f"{selected_currency} {avg_price:.2f}")
 
 # Total Revenue KPI
-total_revenue = (filtered_df['price'] * total_books).sum()
+total_revenue = (filtered_df['price'] ).sum()
 total_revenue_in_selected_currency = convert_to_currency(total_revenue, exchange_rate)
 formatted_total_revenue = humanize.intword(total_revenue_in_selected_currency)  # Format large numbers
 st.sidebar.metric(f"Total Revenue ({selected_currency})", f"{selected_currency} {formatted_total_revenue}")
