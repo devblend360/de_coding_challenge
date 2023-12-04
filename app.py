@@ -29,7 +29,7 @@ def convert_to_currency(price_in_dollars, exchange_rate):
 # Fetch real-time exchange rate
 def get_exchange_rate(target_currency):
     currency_rates = CurrencyRates()
-    return currency_rates.get_rate('USD', target_currency)
+    return currency_rates.get_rate('GBP', target_currency)
 
 books_df = load_data()
 
@@ -50,7 +50,7 @@ availability_filter = st.sidebar.selectbox(
 )
 
 # Currency selection
-selected_currency = st.sidebar.radio("Select Currency:", ["USD", "INR"], index=0)
+selected_currency = st.sidebar.radio("Select Currency:", ["GBP", "INR"], index=0)
 
 # Apply filters
 filtered_df = books_df[(books_df["rating"].isin(rating_filter)) & 
